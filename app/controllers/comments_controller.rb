@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to prototype_path(@comment.prototype_id)
     else
-      render :show
+      redirect_to "/prototypes/#{@comment.prototype_id}"
     end
   end
 
